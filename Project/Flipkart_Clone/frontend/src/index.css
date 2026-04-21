@@ -1,0 +1,27 @@
+/* Reset all elements to prevent hidden gaps */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #f1f3f6;
+  width: 100%;
+  overflow-x: hidden; /* Prevents the horizontal wobble on mobile */
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-content {
+  width: 100%;
+  min-height: 80vh;
+}
+
+/* Use this wrapper on your pages (Cart, Wishlist, etc.) to keep them centered */
+.page-container {
+  width: 100%;
+  max-width: 1248px; 
+  margin: 0 auto;
+  padding: 0 10px;
+}

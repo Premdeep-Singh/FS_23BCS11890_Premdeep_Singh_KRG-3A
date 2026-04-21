@@ -1,0 +1,268 @@
+.detail-page {
+  padding: 20px;
+  background-color: #f1f3f6;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+}
+
+.detail-container {
+  display: flex;
+  background-color: #fff;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  gap: 30px;
+}
+
+.detail-left {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Carousel Styles --- */
+.main-img-container {
+  position: relative; /* REQUIRED to keep arrows inside */
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  overflow: hidden; /* Prevents image bleeding over arrows */
+}
+
+.main-carousel-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-btn {
+  position: absolute; /* REQUIRED for floating arrows */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: 1px solid #d7d7d7;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  z-index: 10; /* REQUIRED to bring arrows to the very front */
+}
+
+.carousel-btn:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.carousel-btn.left { left: 10px; }
+.carousel-btn.right { right: 10px; }
+
+/* --- Thumbnail Styles --- */
+.img-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-thumbnails img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.img-thumbnails img.active-thumb {
+  border-color: #2874f0;
+}
+
+.img-thumbnails img:hover {
+  border-color: #2874f0;
+}
+
+/* --- Action Buttons --- */
+.detail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cart, .btn-buy {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-cart { background-color: #ff9f00; }
+.btn-buy { background-color: #fb641b; }
+
+/* --- Right Side Details --- */
+.detail-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail-name {
+  font-size: 22px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.detail-rating {
+  display: inline-flex;
+  align-items: center;
+  background-color: #388e3c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.detail-rating span {
+  color: #878787;
+  margin-left: 10px;
+  font-weight: 500;
+  background: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #f0f0f0;
+  margin: 10px 0;
+}
+
+.detail-price {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.detail-current-price {
+  font-size: 28px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.detail-original-price {
+  font-size: 16px;
+  color: #878787;
+  text-decoration: line-through;
+}
+
+.detail-discount {
+  font-size: 16px;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.detail-specs table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.detail-specs td {
+  padding: 8px 0;
+  color: #212121;
+  font-size: 14px;
+}
+
+.detail-specs td:first-child {
+  color: #878787;
+  width: 30%;
+}
+
+.detail-description h3, .detail-specs h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #212121;
+}
+
+.detail-description p {
+  color: #212121;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Ensure the image container can hold the absolute button */
+.main-img-container {
+  position: relative;
+}
+
+/* The authentic circular button */
+.btn-wishlist-circle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.btn-wishlist-circle:hover {
+  transform: scale(1.05);
+}
+
+/* The Heart SVG Icon */
+.btn-wishlist-circle .heart-icon {
+  stroke: #c2c2c2; /* Grey outline */
+  fill: transparent;
+  transition: all 0.2s ease;
+}
+
+/* Fills in with red when you hover! */
+.btn-wishlist-circle:hover .heart-icon {
+  stroke: #ff4343;
+  fill: #ff4343;
+}
+
+/* Update your existing circle button styles */
+.btn-wishlist-circle.active .heart-icon {
+  fill: #ff4343;
+  stroke: #ff4343;
+}
+
+/* Optional: Slight animation when clicking */
+.btn-wishlist-circle:active {
+  transform: scale(0.8);
+  transition: transform 0.1s;
+}
