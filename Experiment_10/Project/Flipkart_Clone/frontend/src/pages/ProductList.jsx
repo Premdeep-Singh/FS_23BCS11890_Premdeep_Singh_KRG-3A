@@ -16,7 +16,7 @@ function ProductList() {
     if (search) params.search = search;
     if (category !== 'All') params.category = category;
     
-    axios.get('https://flipkart-clone-backend-sm1d.onrender.com/api/products', { params })
+    axios.get('https://localhost:5174/api/products', { params })
       .then(res => {
         setProducts(res.data);
       })
